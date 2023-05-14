@@ -38,7 +38,10 @@ const CommentsForm = ({ slug }) => {
           name="email"
         />
       </div>
-      <div className="grid grid-cols-1 gap-4 mb-4"></div>
+      {/* <div className="grid grid-cols-1 gap-4 mb-4"></div> */}
+      {error && (
+        <p className="text-xs text-red-500">All fields are required.</p>
+      )}
     </div>
   );
 };
