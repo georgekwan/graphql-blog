@@ -22,7 +22,7 @@ const CommentsForm = ({ slug }) => {
           placeholder="Comment"
         />
       </div>
-      <div className="grid grid-cols-1 gap-4 mb-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
         <input
           type="text"
           ref={nameEl}
@@ -30,8 +30,6 @@ const CommentsForm = ({ slug }) => {
           placeholder="Name"
           name="name"
         />
-      </div>
-      <div className="grid grid-cols-1 gap-4 mb-4">
         <input
           type="text"
           ref={emailEl}
@@ -40,6 +38,7 @@ const CommentsForm = ({ slug }) => {
           name="email"
         />
       </div>
+      <div className="grid grid-cols-1 gap-4 mb-4"></div>
     </div>
   );
 };
