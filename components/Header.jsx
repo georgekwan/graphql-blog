@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 import Link from 'next/link';
 
-import { getCategorgies } from '@/services';
+import { getCategories } from '@/services';
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    getCategorgies().then((newCategories) => setCategories(newCategories));
+    getCategories().then((newCategories) => setCategories(newCategories));
   }, []);
   return (
     <div className="container mx-auto px-10 mb-8">
