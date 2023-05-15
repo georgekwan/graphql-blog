@@ -8,8 +8,8 @@ import {
   Comments,
   CommentsForm,
   Loader,
-} from '../../components';
-import { getPosts, getPostDetails } from '../../services';
+} from '@/components';
+import { getPosts, getPostDetails } from '@/services';
 
 const PostDetails = ({ post }) => {
   return (
