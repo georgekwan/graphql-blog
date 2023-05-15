@@ -119,9 +119,9 @@ export const getSimilarPosts = async (categories, slug) => {
   return result.posts;
 };
 
-export const getCategorgies = async () => {
+export const getCategories = async () => {
   const query = gql`
-    query getCategorgies {
+    query GetGategories {
       categories {
         name
         slug
@@ -142,4 +142,18 @@ export const submitComment = async (obj) => {
   });
 
   return result.json();
+};
+
+export const getComments = async (slug) => {
+  const query = gql`
+    query GetComments($slug: String!) {
+      comments(where: { post: { slug: $slug } }) {
+        name
+        createdAt
+        comment
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query, { slug });
+  return result.comments;
 };
